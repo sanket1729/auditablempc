@@ -1,0 +1,1547 @@
+
+running 1 test
+Git hash:49e22eecb0aa0a4ff92eb4f6338dcc99e9e2926b
+
+Running Auditable MPC test
+statement length:8
+Number of constraints:16384
+Number of servers:2
+Start:   Marlin::UniversalSetup with max_degree 98298, computed for a maximum of 16384 constraints, 10 vars, 16384 non_zero
+··Start:   KZG10::Setup with degree 98298
+····Start:   Generating powers of G
+····End:     Generating powers of G ................................................3.534s
+····Start:   Generating powers of gamma * G
+····End:     Generating powers of gamma * G ........................................3.535s
+··End:     KZG10::Setup with degree 98298 ..........................................7.226s
+End:     Marlin::UniversalSetup with max_degree 98298, computed for a maximum of 16384 constraints, 10 vars, 16384 non_zero 7.227s
+Step 1a: Universal SRS setup complete!
+Step 1b: MPC Preprocessing Complete
+Step 1c: Pederson Commitment setup completed
+Start:   Marlin::Index
+··Start:   AHP::Index
+····Start:   Generating constraints
+····End:     Generating constraints ................................................5.109ms
+····Start:   Padding matrices to make them square
+····End:     Padding matrices to make them square ..................................100.815µs
+····Start:   Generating A polynomials
+······Start:   Computing row, col, and val LDEs
+········Start:   Precomputing eq_poly_vals
+········End:     Precomputing eq_poly_vals .........................................19.542ms
+········Start:   Computing row, col and val evals
+········End:     Computing row, col and val evals ..................................35.809ms
+········Start:   Interpolating on K and B
+········End:     Interpolating on K and B ..........................................337.528ms
+······End:     Computing row, col, and val LDEs ....................................393.599ms
+····End:     Generating A polynomials ..............................................394.881ms
+····Start:   Generating B polynomials
+······Start:   Computing row, col, and val LDEs
+········Start:   Precomputing eq_poly_vals
+········End:     Precomputing eq_poly_vals .........................................19.714ms
+········Start:   Computing row, col and val evals
+········End:     Computing row, col and val evals ..................................34.556ms
+········Start:   Interpolating on K and B
+········End:     Interpolating on K and B ..........................................340.279ms
+······End:     Computing row, col, and val LDEs ....................................395.375ms
+····End:     Generating B polynomials ..............................................396.548ms
+····Start:   Generating C polynomials
+······Start:   Computing row, col, and val LDEs
+········Start:   Precomputing eq_poly_vals
+········End:     Precomputing eq_poly_vals .........................................19.710ms
+········Start:   Computing row, col and val evals
+········End:     Computing row, col and val evals ..................................42.296ms
+········Start:   Interpolating on K and B
+········End:     Interpolating on K and B ..........................................339.770ms
+······End:     Computing row, col, and val LDEs ....................................402.533ms
+····End:     Generating C polynomials ..............................................403.707ms
+··End:     AHP::Index ..............................................................1.203s
+··Start:   Constructing `powers` of size 98298 for unshifted polys
+··End:     Constructing `powers` of size 98298 for unshifted polys .................13.705ms
+··Start:   Constructing `shifted_powers` of size 16383
+··End:     Constructing `shifted_powers` of size 16383 .............................537.377µs
+··Start:   Commit to index polynomials
+····Start:   Committing to polynomials
+······Start:   Polynomial a_row of degree 1, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 1 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................753ns
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................1.545ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................285ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.521ms
+········End:     Committing to polynomial of degree 1 with hiding_bound: None ......3.110ms
+······End:     Polynomial a_row of degree 1, degree bound None, and hiding bound None 3.122ms
+······Start:   Polynomial a_col of degree 16383, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................468.453µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................517.204ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................364ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.542ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: None ..519.300ms
+······End:     Polynomial a_col of degree 16383, degree bound None, and hiding bound None 519.334ms
+······Start:   Polynomial a_val of degree 16383, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................542.636µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................460.828ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................192ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.530ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: None ..462.949ms
+······End:     Polynomial a_val of degree 16383, degree bound None, and hiding bound None 462.982ms
+······Start:   Polynomial b_row of degree 1, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 1 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................233ns
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................1.520ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................163ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.522ms
+········End:     Committing to polynomial of degree 1 with hiding_bound: None ......3.81ms
+······End:     Polynomial b_row of degree 1, degree bound None, and hiding bound None 3.100ms
+······Start:   Polynomial b_col of degree 16383, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................537.954µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................469.780ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................186ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.534ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: None ..471.902ms
+······End:     Polynomial b_col of degree 16383, degree bound None, and hiding bound None 471.934ms
+······Start:   Polynomial b_val of degree 16383, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................539.408µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................463.526ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................162ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.530ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: None ..465.643ms
+······End:     Polynomial b_val of degree 16383, degree bound None, and hiding bound None 465.672ms
+······Start:   Polynomial c_row of degree 1, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 1 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................265ns
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................1.526ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................138ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.521ms
+········End:     Committing to polynomial of degree 1 with hiding_bound: None ......3.86ms
+······End:     Polynomial c_row of degree 1, degree bound None, and hiding bound None 3.95ms
+······Start:   Polynomial c_col of degree 16383, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................537.947µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................475.932ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................402ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.698ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: None ..478.233ms
+······End:     Polynomial c_col of degree 16383, degree bound None, and hiding bound None 478.264ms
+······Start:   Polynomial c_val of degree 16383, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................595.505µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................478.269ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................216ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.532ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: None ..480.449ms
+······End:     Polynomial c_val of degree 16383, degree bound None, and hiding bound None 480.484ms
+····End:     Committing to polynomials .............................................2.888s
+··End:     Commit to index polynomials .............................................2.888s
+End:     Marlin::Index .............................................................4.108s
+Step 1d: Called indexer for a specific circuit
+Step 2a: Created MPC clients
+Step 2b: Servers initialized
+Start:   Committing to polynomials
+··Start:   Polynomial Fp256(548344A9933D7FED004CFBE0CE83401321A414515944A0195494B523DDEB368B) of degree 7, degree bound None, and hiding bound Some(1)
+····Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................870ns
+······Start:   MSM to compute commitment to plaintext poly
+······End:     MSM to compute commitment to plaintext poly .........................3.297ms
+······Start:   Sampling a random polynomial of degree 1
+······End:     Sampling a random polynomial of degree 1 ............................2.55µs
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................217ns
+······Start:   MSM to compute commitment to random poly
+······End:     MSM to compute commitment to random poly ............................2.411ms
+····End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .......5.768ms
+··End:     Polynomial Fp256(548344A9933D7FED004CFBE0CE83401321A414515944A0195494B523DDEB368B) of degree 7, degree bound None, and hiding bound Some(1) 5.801ms
+End:     Committing to polynomials .................................................5.814ms
+Start:   Committing to polynomials
+··Start:   Polynomial Fp256(075977F1DDFCF6E0238D6C282946B45A6519D0A871E23C0A703C0278955AD790) of degree 7, degree bound None, and hiding bound Some(1)
+····Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................364ns
+······Start:   MSM to compute commitment to plaintext poly
+······End:     MSM to compute commitment to plaintext poly .........................3.138ms
+······Start:   Sampling a random polynomial of degree 1
+······End:     Sampling a random polynomial of degree 1 ............................744ns
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................215ns
+······Start:   MSM to compute commitment to random poly
+······End:     MSM to compute commitment to random poly ............................2.385ms
+····End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .......5.586ms
+··End:     Polynomial Fp256(075977F1DDFCF6E0238D6C282946B45A6519D0A871E23C0A703C0278955AD790) of degree 7, degree bound None, and hiding bound Some(1) 5.617ms
+End:     Committing to polynomials .................................................5.626ms
+Start:   Committing to polynomials
+··Start:   Polynomial Fp256(3E1CDF98CA2EC9719B072D20D6E6108CB5A9EF6B521F9ECF29B237B50E98AB82) of degree 7, degree bound None, and hiding bound Some(1)
+····Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................350ns
+······Start:   MSM to compute commitment to plaintext poly
+······End:     MSM to compute commitment to plaintext poly .........................3.298ms
+······Start:   Sampling a random polynomial of degree 1
+······End:     Sampling a random polynomial of degree 1 ............................1.401µs
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................197ns
+······Start:   MSM to compute commitment to random poly
+······End:     MSM to compute commitment to random poly ............................2.394ms
+····End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .......5.744ms
+··End:     Polynomial Fp256(3E1CDF98CA2EC9719B072D20D6E6108CB5A9EF6B521F9ECF29B237B50E98AB82) of degree 7, degree bound None, and hiding bound Some(1) 5.773ms
+End:     Committing to polynomials .................................................5.781ms
+Start:   Committing to polynomials
+··Start:   Polynomial Fp256(150A1841A512FE254A40D29855B355ADC3DC0D588F0A1ED8079AE0F06CFDD0DC) of degree 7, degree bound None, and hiding bound Some(1)
+····Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................375ns
+······Start:   MSM to compute commitment to plaintext poly
+······End:     MSM to compute commitment to plaintext poly .........................2.739ms
+······Start:   Sampling a random polynomial of degree 1
+······End:     Sampling a random polynomial of degree 1 ............................448ns
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................239ns
+······Start:   MSM to compute commitment to random poly
+······End:     MSM to compute commitment to random poly ............................2.314ms
+····End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .......5.102ms
+··End:     Polynomial Fp256(150A1841A512FE254A40D29855B355ADC3DC0D588F0A1ED8079AE0F06CFDD0DC) of degree 7, degree bound None, and hiding bound Some(1) 5.131ms
+End:     Committing to polynomials .................................................5.141ms
+Start:   Committing to polynomials
+··Start:   Polynomial Fp256(33B3C25FB5CD26857F1A7755815FBDE3925D729A349C65F63FE2E10F7546E6DE) of degree 7, degree bound None, and hiding bound Some(1)
+····Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................381ns
+······Start:   MSM to compute commitment to plaintext poly
+······End:     MSM to compute commitment to plaintext poly .........................3.274ms
+······Start:   Sampling a random polynomial of degree 1
+······End:     Sampling a random polynomial of degree 1 ............................417ns
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................231ns
+······Start:   MSM to compute commitment to random poly
+······End:     MSM to compute commitment to random poly ............................2.353ms
+····End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .......5.683ms
+··End:     Polynomial Fp256(33B3C25FB5CD26857F1A7755815FBDE3925D729A349C65F63FE2E10F7546E6DE) of degree 7, degree bound None, and hiding bound Some(1) 5.712ms
+End:     Committing to polynomials .................................................5.721ms
+Start:   Committing to polynomials
+··Start:   Polynomial Fp256(232DA162B18155C98AA40006307F5B6B6CED5853A8575F39067D5D07D867153D) of degree 7, degree bound None, and hiding bound Some(1)
+····Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................365ns
+······Start:   MSM to compute commitment to plaintext poly
+······End:     MSM to compute commitment to plaintext poly .........................3.194ms
+······Start:   Sampling a random polynomial of degree 1
+······End:     Sampling a random polynomial of degree 1 ............................477ns
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................192ns
+······Start:   MSM to compute commitment to random poly
+······End:     MSM to compute commitment to random poly ............................2.303ms
+····End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .......5.546ms
+··End:     Polynomial Fp256(232DA162B18155C98AA40006307F5B6B6CED5853A8575F39067D5D07D867153D) of degree 7, degree bound None, and hiding bound Some(1) 5.575ms
+End:     Committing to polynomials .................................................5.584ms
+Start:   Computing Partial Commitments to output
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(3E2003A837767C2B26DF74A71A2B149F3D84E0A69052143C9BA9601B9DD8E0F9) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................344ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.270ms
+········Start:   Sampling a random polynomial of degree 1
+········End:     Sampling a random polynomial of degree 1 ..........................721ns
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................191ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.386ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.707ms
+····End:     Polynomial Fp256(3E2003A837767C2B26DF74A71A2B149F3D84E0A69052143C9BA9601B9DD8E0F9) of degree 7, degree bound None, and hiding bound Some(1) 5.736ms
+··End:     Committing to polynomials ...............................................5.746ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(548344A9933D7FED004CFBE0CE83401321A414515944A0195494B523DDEB368B) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................326ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.267ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................201ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.389ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.703ms
+····End:     Polynomial Fp256(548344A9933D7FED004CFBE0CE83401321A414515944A0195494B523DDEB368B) of degree 7, degree bound None, and hiding bound Some(1) 5.733ms
+··End:     Committing to polynomials ...............................................5.742ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(075977F1DDFCF6E0238D6C282946B45A6519D0A871E23C0A703C0278955AD790) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................325ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.131ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................209ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.383ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.555ms
+····End:     Polynomial Fp256(075977F1DDFCF6E0238D6C282946B45A6519D0A871E23C0A703C0278955AD790) of degree 7, degree bound None, and hiding bound Some(1) 5.589ms
+··End:     Committing to polynomials ...............................................5.598ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(3E1CDF98CA2EC9719B072D20D6E6108CB5A9EF6B521F9ECF29B237B50E98AB82) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................322ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.292ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................186ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.390ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.723ms
+····End:     Polynomial Fp256(3E1CDF98CA2EC9719B072D20D6E6108CB5A9EF6B521F9ECF29B237B50E98AB82) of degree 7, degree bound None, and hiding bound Some(1) 5.751ms
+··End:     Committing to polynomials ...............................................5.761ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(150A1841A512FE254A40D29855B355ADC3DC0D588F0A1ED8079AE0F06CFDD0DC) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................344ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................2.733ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................202ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.316ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.94ms
+····End:     Polynomial Fp256(150A1841A512FE254A40D29855B355ADC3DC0D588F0A1ED8079AE0F06CFDD0DC) of degree 7, degree bound None, and hiding bound Some(1) 5.123ms
+··End:     Committing to polynomials ...............................................5.133ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(33B3C25FB5CD26857F1A7755815FBDE3925D729A349C65F63FE2E10F7546E6DE) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................320ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.273ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................204ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.349ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.662ms
+····End:     Polynomial Fp256(33B3C25FB5CD26857F1A7755815FBDE3925D729A349C65F63FE2E10F7546E6DE) of degree 7, degree bound None, and hiding bound Some(1) 5.691ms
+··End:     Committing to polynomials ...............................................5.700ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(232DA162B18155C98AA40006307F5B6B6CED5853A8575F39067D5D07D867153D) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................316ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.177ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................355ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.300ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.518ms
+····End:     Polynomial Fp256(232DA162B18155C98AA40006307F5B6B6CED5853A8575F39067D5D07D867153D) of degree 7, degree bound None, and hiding bound Some(1) 5.546ms
+··End:     Committing to polynomials ...............................................5.555ms
+End:     Computing Partial Commitments to output ...................................39.333ms
+Start:   Computing Partial Commitments to output
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(3E2003A837767C2B26DF74A71A2B149F3D84E0A69052143C9BA9601B9DD8E0F9) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................335ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.261ms
+········Start:   Sampling a random polynomial of degree 1
+········End:     Sampling a random polynomial of degree 1 ..........................608ns
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................194ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.388ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.703ms
+····End:     Polynomial Fp256(3E2003A837767C2B26DF74A71A2B149F3D84E0A69052143C9BA9601B9DD8E0F9) of degree 7, degree bound None, and hiding bound Some(1) 5.732ms
+··End:     Committing to polynomials ...............................................5.741ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(548344A9933D7FED004CFBE0CE83401321A414515944A0195494B523DDEB368B) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................318ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.270ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................192ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.417ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.729ms
+····End:     Polynomial Fp256(548344A9933D7FED004CFBE0CE83401321A414515944A0195494B523DDEB368B) of degree 7, degree bound None, and hiding bound Some(1) 5.758ms
+··End:     Committing to polynomials ...............................................5.767ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(075977F1DDFCF6E0238D6C282946B45A6519D0A871E23C0A703C0278955AD790) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................335ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.131ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................314ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.382ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.553ms
+····End:     Polynomial Fp256(075977F1DDFCF6E0238D6C282946B45A6519D0A871E23C0A703C0278955AD790) of degree 7, degree bound None, and hiding bound Some(1) 5.582ms
+··End:     Committing to polynomials ...............................................5.591ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(3E1CDF98CA2EC9719B072D20D6E6108CB5A9EF6B521F9ECF29B237B50E98AB82) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................332ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.292ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................368ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.391ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.729ms
+····End:     Polynomial Fp256(3E1CDF98CA2EC9719B072D20D6E6108CB5A9EF6B521F9ECF29B237B50E98AB82) of degree 7, degree bound None, and hiding bound Some(1) 5.758ms
+··End:     Committing to polynomials ...............................................5.767ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(150A1841A512FE254A40D29855B355ADC3DC0D588F0A1ED8079AE0F06CFDD0DC) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................334ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................2.737ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................371ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.313ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.91ms
+····End:     Polynomial Fp256(150A1841A512FE254A40D29855B355ADC3DC0D588F0A1ED8079AE0F06CFDD0DC) of degree 7, degree bound None, and hiding bound Some(1) 5.120ms
+··End:     Committing to polynomials ...............................................5.129ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(33B3C25FB5CD26857F1A7755815FBDE3925D729A349C65F63FE2E10F7546E6DE) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................324ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.276ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................411ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.352ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.669ms
+····End:     Polynomial Fp256(33B3C25FB5CD26857F1A7755815FBDE3925D729A349C65F63FE2E10F7546E6DE) of degree 7, degree bound None, and hiding bound Some(1) 5.698ms
+··End:     Committing to polynomials ...............................................5.707ms
+··Start:   Committing to polynomials
+····Start:   Polynomial Fp256(232DA162B18155C98AA40006307F5B6B6CED5853A8575F39067D5D07D867153D) of degree 7, degree bound None, and hiding bound Some(1)
+······Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................332ns
+········Start:   MSM to compute commitment to plaintext poly
+········End:     MSM to compute commitment to plaintext poly .......................3.188ms
+········Start:   Converting polynomial coeffs to bigints
+········End:     Converting polynomial coeffs to bigints ...........................390ns
+········Start:   MSM to compute commitment to random poly
+········End:     MSM to compute commitment to random poly ..........................2.305ms
+······End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) .....5.538ms
+····End:     Polynomial Fp256(232DA162B18155C98AA40006307F5B6B6CED5853A8575F39067D5D07D867153D) of degree 7, degree bound None, and hiding bound Some(1) 5.566ms
+··End:     Committing to polynomials ...............................................5.576ms
+End:     Computing Partial Commitments to output ...................................39.366ms
+StartMsg: Stats for Init round communication per party
+  
+  Init Round Total Communication:240
+  Init round Number of commitments without degree bound:5
+  Init round Size of Commitments without degree bound:240
+  Init round Number of Commitments with degree bound:0
+  Init round Size of commitments with degree bound:0
+
+EndMsg: Stats for Init round communication per party
+StartMsg: Stats for Init round communication per party
+  
+  Init Round Total Communication:0
+  Init round Number of commitments without degree bound:0
+  Init round Size of Commitments without degree bound:0
+  Init round Number of Commitments with degree bound:0
+  Init round Size of commitments with degree bound:0
+
+EndMsg: Stats for Init round communication per party
+Start:   Initial Commitment and Output Check time
+End:     Initial Commitment and Output Check time ..................................207.240ms
+Start:   Committing to polynomials
+··Start:   Polynomial 1 of degree 7, degree bound None, and hiding bound None
+····Start:   Committing to polynomial of degree 7 with hiding_bound: None
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................863ns
+······Start:   MSM to compute commitment to plaintext poly
+······End:     MSM to compute commitment to plaintext poly .........................3.890ms
+······Start:   Converting polynomial coeffs to bigints
+······End:     Converting polynomial coeffs to bigints .............................265ns
+······Start:   MSM to compute commitment to random poly
+······End:     MSM to compute commitment to random poly ............................1.547ms
+····End:     Committing to polynomial of degree 7 with hiding_bound: None ..........5.497ms
+··End:     Polynomial 1 of degree 7, degree bound None, and hiding bound None ......5.529ms
+End:     Committing to polynomials .................................................5.540ms
+Start:   Marlin::Prover
+··Start:   Initize prover for all servers
+····Start:   AHP::Prover::Init
+······Start:   Generating constraints and witnesses
+······End:     Generating constraints and witnesses ................................3.597µs
+······Start:   Padding matrices to make them square
+······End:     Padding matrices to make them square ................................538.914µs
+······Start:   Evaluating z_A
+······End:     Evaluating z_A ......................................................917.214µs
+······Start:   Evaluating z_B
+······End:     Evaluating z_B ......................................................935.938µs
+····End:     AHP::Prover::Init .....................................................2.489ms
+··End:     Initize prover for all servers ..........................................2.511ms
+··Start:   Initize prover for all servers
+····Start:   AHP::Prover::Init
+······Start:   Generating constraints and witnesses
+······End:     Generating constraints and witnesses ................................1.825µs
+······Start:   Padding matrices to make them square
+······End:     Padding matrices to make them square ................................470.502µs
+······Start:   Evaluating z_A
+······End:     Evaluating z_A ......................................................758.378µs
+······Start:   Evaluating z_B
+······End:     Evaluating z_B ......................................................754.545µs
+····End:     AHP::Prover::Init .....................................................2.63ms
+··End:     Initize prover for all servers ..........................................2.82ms
+··Start:   Committing to first round polys
+····Start:   AHP::Prover::FirstRound
+······Start:   Computing x polynomial and evals
+······End:     Computing x polynomial and evals ....................................10.926ms
+······Start:   Computing w polynomial
+······End:     Computing w polynomial ..............................................16.2ms
+······Start:   Computing z_A polynomial
+······End:     Computing z_A polynomial ............................................10.690ms
+······Start:   Computing z_B polynomial
+······End:     Computing z_B polynomial ............................................10.571ms
+······Start:   Computing mask polynomial
+······End:     Computing mask polynomial ...........................................10.891ms
+····End:     AHP::Prover::FirstRound ...............................................61.242ms
+····Start:   Committing to polynomials
+······Start:   Polynomial w of degree 16375, degree bound None, and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 16375 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................388.202µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................555.491ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................4.241µs
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................1.423µs
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.685ms
+········End:     Committing to polynomial of degree 16375 with hiding_bound: Some(1) 558.667ms
+······End:     Polynomial w of degree 16375, degree bound None, and hiding bound Some(1) 558.703ms
+······Start:   Polynomial z_a of degree 16383, degree bound None, and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................757.886µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................506.886ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................1.471µs
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................317ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.572ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: Some(1) 510.286ms
+······End:     Polynomial z_a of degree 16383, degree bound None, and hiding bound Some(1) 510.318ms
+······Start:   Polynomial z_b of degree 16383, degree bound None, and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................543.931µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................469.451ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................3.877µs
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................1.281µs
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.398ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: Some(1) 472.488ms
+······End:     Polynomial z_b of degree 16383, degree bound None, and hiding bound Some(1) 472.521ms
+······Start:   Polynomial mask_poly of degree 49151, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 49151 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................1.775ms
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................1.510s
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................462ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.538ms
+········End:     Committing to polynomial of degree 49151 with hiding_bound: None ..1.513s
+······End:     Polynomial mask_poly of degree 49151, degree bound None, and hiding bound None 1.513s
+····End:     Committing to polynomials .............................................3.55s
+····Start:   Committing to polynomials
+······Start:   Polynomial x of degree 7, degree bound None, and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................1.884µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................3.308ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................273ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.365ms
+········End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) ...5.722ms
+······End:     Polynomial x of degree 7, degree bound None, and hiding bound Some(1) 5.753ms
+····End:     Committing to polynomials .............................................5.765ms
+··End:     Committing to first round polys .........................................3.123s
+··Start:   Committing to first round polys
+····Start:   AHP::Prover::FirstRound
+······Start:   Computing x polynomial and evals
+······End:     Computing x polynomial and evals ....................................10.210ms
+······Start:   Computing w polynomial
+······End:     Computing w polynomial ..............................................14.790ms
+······Start:   Computing z_A polynomial
+······End:     Computing z_A polynomial ............................................11.908ms
+······Start:   Computing z_B polynomial
+······End:     Computing z_B polynomial ............................................10.730ms
+······Start:   Computing mask polynomial
+······End:     Computing mask polynomial ...........................................10.387ms
+····End:     AHP::Prover::FirstRound ...............................................59.874ms
+····Start:   Committing to polynomials
+······Start:   Polynomial w of degree 16375, degree bound None, and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 16375 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................513.905µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................504.132ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................2.268µs
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................422ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.348ms
+········End:     Committing to polynomial of degree 16375 with hiding_bound: Some(1) 507.66ms
+······End:     Polynomial w of degree 16375, degree bound None, and hiding bound Some(1) 507.98ms
+······Start:   Polynomial z_a of degree 16383, degree bound None, and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................382.579µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................534.993ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................973ns
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................431ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.896ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: Some(1) 538.350ms
+······End:     Polynomial z_a of degree 16383, degree bound None, and hiding bound Some(1) 538.386ms
+······Start:   Polynomial z_b of degree 16383, degree bound None, and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 16383 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................456.705µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................551.833ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................727ns
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................355ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.828ms
+········End:     Committing to polynomial of degree 16383 with hiding_bound: Some(1) 555.189ms
+······End:     Polynomial z_b of degree 16383, degree bound None, and hiding bound Some(1) 555.225ms
+······Start:   Polynomial mask_poly of degree 49151, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 49151 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................1.390ms
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................1.423s
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................782ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.596ms
+········End:     Committing to polynomial of degree 49151 with hiding_bound: None ..1.426s
+······End:     Polynomial mask_poly of degree 49151, degree bound None, and hiding bound None 1.426s
+····End:     Committing to polynomials .............................................3.26s
+····Start:   Committing to polynomials
+······Start:   Polynomial x of degree 7, degree bound None, and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 7 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................1.766µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................3.362ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................326ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.372ms
+········End:     Committing to polynomial of degree 7 with hiding_bound: Some(1) ...5.784ms
+······End:     Polynomial x of degree 7, degree bound None, and hiding bound Some(1) 5.815ms
+····End:     Committing to polynomials .............................................5.827ms
+··End:     Committing to first round polys .........................................3.93s
+··StartMsg: Stats for first round communication per party
+    
+    First round  Total shares size in bytes:240
+    First round Number of commitments without degree bound:5
+    First round Size of Commitments without degree bound:240
+    First round Number of Commitments with degree bound:0
+    First round Size of commitments with degree bound:0
+
+··EndMsg: Stats for first round communication per party
+··Start:   First Round communication
+··End:     First Round communication ...............................................200.102ms
+··Start:   Combining partial commitments
+··End:     Combining partial commitments ...........................................5.251ms
+··Start:   Committing to second round polys
+····Start:   AHP::Prover::SecondRound
+······Start:   Compute r_alpha_x evals
+······End:     Compute r_alpha_x evals .............................................5.446ms
+······Start:   Compute r_alpha_x poly
+······End:     Compute r_alpha_x poly ..............................................13.214ms
+······Start:   Compute r_alpha_x precomputation
+······End:     Compute r_alpha_x precomputation ....................................41.666ms
+······Start:   Compute r_M_alpha evals on H
+······End:     Compute r_M_alpha evals on H ........................................164.627ms
+······Start:   Compute z_m poly
+······End:     Compute z_m poly ....................................................73.516ms
+······Start:   Compute r_m evals
+······End:     Compute r_m evals ...................................................7.209ms
+······Start:   Compute r_m poly
+······End:     Compute r_m poly ....................................................10.751ms
+······Start:   Compute z poly
+······End:     Compute z poly ......................................................286.562µs
+······Start:   Compute q_1 poly
+······End:     Compute q_1 poly ....................................................273.686ms
+······Start:   Compute sumcheck h and g polys
+······End:     Compute sumcheck h and g polys ......................................8.214ms
+····End:     AHP::Prover::SecondRound ..............................................598.807ms
+····Start:   Committing to polynomials
+······Start:   Polynomial g_1 of degree 16382, degree bound Some(16382), and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 16382 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................408.948µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................502.851ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................1.194µs
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................305ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.349ms
+········End:     Committing to polynomial of degree 16382 with hiding_bound: Some(1) 505.674ms
+········Start:   Committing to polynomial of degree 16382 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................380.593µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................503.771ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................2.368µs
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................304ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.370ms
+········End:     Committing to polynomial of degree 16382 with hiding_bound: Some(1) 506.583ms
+······End:     Polynomial g_1 of degree 16382, degree bound Some(16382), and hiding bound Some(1) 1.12s
+······Start:   Polynomial h_1 of degree 32767, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 32767 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................823.592µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................1.10s
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................318ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.543ms
+········End:     Committing to polynomial of degree 32767 with hiding_bound: None ..1.12s
+······End:     Polynomial h_1 of degree 32767, degree bound None, and hiding bound None 1.12s
+····End:     Committing to polynomials .............................................2.25s
+··End:     Committing to second round polys ........................................2.627s
+··Start:   Committing to second round polys
+····Start:   AHP::Prover::SecondRound
+······Start:   Compute r_alpha_x evals
+······End:     Compute r_alpha_x evals .............................................3.558ms
+······Start:   Compute r_alpha_x poly
+······End:     Compute r_alpha_x poly ..............................................12.34ms
+······Start:   Compute r_alpha_x precomputation
+······End:     Compute r_alpha_x precomputation ....................................39.132ms
+······Start:   Compute r_M_alpha evals on H
+······End:     Compute r_M_alpha evals on H ........................................162.407ms
+······Start:   Compute z_m poly
+······End:     Compute z_m poly ....................................................71.703ms
+······Start:   Compute r_m evals
+······End:     Compute r_m evals ...................................................7.212ms
+······Start:   Compute r_m poly
+······End:     Compute r_m poly ....................................................10.547ms
+······Start:   Compute z poly
+······End:     Compute z poly ......................................................250.87µs
+······Start:   Compute q_1 poly
+······End:     Compute q_1 poly ....................................................271.548ms
+······Start:   Compute sumcheck h and g polys
+······End:     Compute sumcheck h and g polys ......................................7.804ms
+····End:     AHP::Prover::SecondRound ..............................................586.375ms
+····Start:   Committing to polynomials
+······Start:   Polynomial g_1 of degree 16382, degree bound Some(16382), and hiding bound Some(1)
+········Start:   Committing to polynomial of degree 16382 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................389.254µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................503.141ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................1.115µs
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................349ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.391ms
+········End:     Committing to polynomial of degree 16382 with hiding_bound: Some(1) 505.986ms
+········Start:   Committing to polynomial of degree 16382 with hiding_bound: Some(1)
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................380.199µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................504.225ms
+··········Start:   Sampling a random polynomial of degree 1
+··········End:     Sampling a random polynomial of degree 1 ........................867ns
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................321ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.392ms
+········End:     Committing to polynomial of degree 16382 with hiding_bound: Some(1) 507.60ms
+······End:     Polynomial g_1 of degree 16382, degree bound Some(16382), and hiding bound Some(1) 1.13s
+······Start:   Polynomial h_1 of degree 32767, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 32767 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................804.684µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................1.7s
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................187ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.539ms
+········End:     Committing to polynomial of degree 32767 with hiding_bound: None ..1.9s
+······End:     Polynomial h_1 of degree 32767, degree bound None, and hiding bound None 1.9s
+····End:     Committing to polynomials .............................................2.22s
+··End:     Committing to second round polys ........................................2.611s
+··StartMsg: Stats for second round communication per party
+    
+    Second Round Total shares in bytes:496
+    Second Round Number of commitments without degree bound:1
+    Second Round Size of Commitments without degree bound:48
+    Second Round Number of Commitments with degree bound:1
+    Second Round Size of commitments with degree bound:96
+    Second Round total number of evaluations:7
+    Second Round Evaluations in bytes:224
+    Total PC proof size:128
+
+··EndMsg: Stats for second round communication per party
+··Start:   Second Round communication
+··End:     Second Round communication ..............................................200.125ms
+··Start:   Second Round Combine time
+··End:     Second Round Combine time ...............................................4.529ms
+··Start:   AHP::Prover::ThirdRound
+····Start:   Computing M_beta_1 evals
+····End:     Computing M_beta_1 evals ..............................................203.69ms
+····Start:   Computing summed_m_beta_1 poly
+····End:     Computing summed_m_beta_1 poly ........................................66.508ms
+····Start:   Computing q_2 poly
+····End:     Computing q_2 poly ....................................................73.840ms
+····Start:   Computing sumcheck h and g polys
+····End:     Computing sumcheck h and g polys ......................................3.563ms
+··End:     AHP::Prover::ThirdRound .................................................347.51ms
+··Start:   Committing to third round polys
+····Start:   Committing to polynomials
+······Start:   Polynomial g_2 of degree 16382, degree bound Some(16382), and hiding bound None
+········Start:   Committing to polynomial of degree 16382 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................394.760µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................505.273ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................249ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.536ms
+········End:     Committing to polynomial of degree 16382 with hiding_bound: None ..507.276ms
+········Start:   Committing to polynomial of degree 16382 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................516.867µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................503.774ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................237ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.531ms
+········End:     Committing to polynomial of degree 16382 with hiding_bound: None ..505.885ms
+······End:     Polynomial g_2 of degree 16382, degree bound Some(16382), and hiding bound None 1.13s
+······Start:   Polynomial h_2 of degree 16382, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 16382 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................500.49µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................584.314ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................226ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................2.224ms
+········End:     Committing to polynomial of degree 16382 with hiding_bound: None ..587.96ms
+······End:     Polynomial h_2 of degree 16382, degree bound None, and hiding bound None 587.137ms
+····End:     Committing to polynomials .............................................1.600s
+··End:     Committing to third round polys .........................................1.600s
+··Start:   AHP::Prover::FourthRound
+····Start:   Computing f_3 evals on K
+····End:     Computing f_3 evals on K ..............................................25.265ms
+····Start:   Computing f_3 poly
+····End:     Computing f_3 poly ....................................................19.330ms
+····Start:   Computing beta_{1,2} - M_{row,col,val} evals on B
+····End:     Computing beta_{1,2} - M_{row,col,val} evals on B .....................31.691ms
+····Start:   Computing a evals on B
+····End:     Computing a evals on B ................................................120.936ms
+····Start:   Computing a poly
+····End:     Computing a poly ......................................................116.721ms
+····Start:   Computing b evals on B
+····End:     Computing b evals on B ................................................32.352ms
+····Start:   Computing b poly
+····End:     Computing b poly ......................................................116.512ms
+····Start:   Computing sumcheck h poly
+····End:     Computing sumcheck h poly .............................................360.317ms
+··End:     AHP::Prover::FourthRound ................................................823.613ms
+··Start:   Committing to fourth round polys
+····Start:   Committing to polynomials
+······Start:   Polynomial g_3 of degree 16382, degree bound Some(16382), and hiding bound None
+········Start:   Committing to polynomial of degree 16382 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................536.560µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................504.106ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................296ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.538ms
+········End:     Committing to polynomial of degree 16382 with hiding_bound: None ..506.237ms
+········Start:   Committing to polynomial of degree 16382 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................381.60µs
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................502.710ms
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................173ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.527ms
+········End:     Committing to polynomial of degree 16382 with hiding_bound: None ..504.666ms
+······End:     Polynomial g_3 of degree 16382, degree bound Some(16382), and hiding bound None 1.10s
+······Start:   Polynomial h_3 of degree 49151, degree bound None, and hiding bound None
+········Start:   Committing to polynomial of degree 49151 with hiding_bound: None
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................1.560ms
+··········Start:   MSM to compute commitment to plaintext poly
+··········End:     MSM to compute commitment to plaintext poly .....................1.355s
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................209ns
+··········Start:   MSM to compute commitment to random poly
+··········End:     MSM to compute commitment to random poly ........................1.534ms
+········End:     Committing to polynomial of degree 49151 with hiding_bound: None ..1.358s
+······End:     Polynomial h_3 of degree 49151, degree bound None, and hiding bound None 1.358s
+····End:     Committing to polynomials .............................................2.369s
+··End:     Committing to fourth round polys ........................................2.369s
+··Start:   PC proof init time
+··End:     PC proof init time ......................................................16.519µs
+··Start:   Evaluating polynomials over query set
+····Start:   Local polynomial evaluation
+····End:     Local polynomial evaluation ...........................................3.69ms
+····Start:   Combine evaluations
+····End:     Combine evaluations ...................................................1.941µs
+····Start:   Local polynomial evaluation
+····End:     Local polynomial evaluation ...........................................6.220ms
+····Start:   Combine evaluations
+····End:     Combine evaluations ...................................................421ns
+····Start:   Local polynomial evaluation
+····End:     Local polynomial evaluation ...........................................9.289ms
+····Start:   Combine evaluations
+····End:     Combine evaluations ...................................................328ns
+····Start:   Local polynomial evaluation
+····End:     Local polynomial evaluation ...........................................3.68ms
+····Start:   Combine evaluations
+····End:     Combine evaluations ...................................................302ns
+····Start:   Local polynomial evaluation
+····End:     Local polynomial evaluation ...........................................4.345µs
+····Start:   Combine evaluations
+····End:     Combine evaluations ...................................................249ns
+····Start:   Local polynomial evaluation
+····End:     Local polynomial evaluation ...........................................3.62ms
+····Start:   Combine evaluations
+····End:     Combine evaluations ...................................................269ns
+····Start:   Local polynomial evaluation
+····End:     Local polynomial evaluation ...........................................3.84ms
+····Start:   Combine evaluations
+····End:     Combine evaluations ...................................................300ns
+··End:     Evaluating polynomials over query set ...................................46.210ms
+··Start:   Generating local Proof shares
+····Start:   Opening 7 polynomials at query set of size 7
+······Start:   Creating proof
+········Start:   Evaluating polynomial
+········End:     Evaluating polynomial .............................................1.429ms
+········Start:   Computing witness polynomial
+········End:     Computing witness polynomial ......................................3.650ms
+········Start:   Evaluating random polynomial
+········End:     Evaluating random polynomial ......................................708ns
+········Start:   Computing random witness polynomial
+········End:     Computing random witness polynomial ...............................5.999µs
+········Start:   Creating proof for unshifted polynomials
+··········Start:   Opening polynomial of degree 49151
+············Start:   Computing witness polynomials
+··············Start:   Evaluating polynomial
+··············End:     Evaluating polynomial .......................................4.344ms
+··············Start:   Computing witness polynomial
+··············End:     Computing witness polynomial ................................10.325ms
+··············Start:   Evaluating random polynomial
+··············End:     Evaluating random polynomial ................................498ns
+··············Start:   Computing random witness polynomial
+··············End:     Computing random witness polynomial .........................4.675µs
+············End:     Computing witness polynomials .................................14.727ms
+············Start:   Converting polynomial coeffs to bigints
+············End:     Converting polynomial coeffs to bigints .......................1.141ms
+············Start:   Computing commitment to witness polynomial
+············End:     Computing commitment to witness polynomial ....................1.355s
+············Start:   Evaluating random polynomial
+············End:     Evaluating random polynomial ..................................930ns
+············Start:   Converting polynomial coeffs to bigints
+············End:     Converting polynomial coeffs to bigints .......................249ns
+············Start:   Computing commitment to random witness polynomial
+············End:     Computing commitment to random witness polynomial .............2.109ms
+··········End:     Opening polynomial of degree 49151 ..............................1.373s
+········End:     Creating proof for unshifted polynomials ..........................1.373s
+········Start:   Creating proof for shifted polynomials
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................390.972µs
+··········Start:   Computing commitment to witness polynomial
+··········End:     Computing commitment to witness polynomial ......................504.46ms
+··········Start:   Evaluating random polynomial
+··········End:     Evaluating random polynomial ....................................810ns
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................241ns
+··········Start:   Computing commitment to random witness polynomial
+··········End:     Computing commitment to random witness polynomial ...............2.149ms
+········End:     Creating proof for shifted polynomials ............................506.683ms
+······End:     Creating proof ......................................................1.892s
+····End:     Opening 7 polynomials at query set of size 7 ..........................1.892s
+··End:     Generating local Proof shares ...........................................1.892s
+··Start:   Generating local Proof shares
+····Start:   Opening 7 polynomials at query set of size 7
+······Start:   Creating proof
+········Start:   Evaluating polynomial
+········End:     Evaluating polynomial .............................................1.447ms
+········Start:   Computing witness polynomial
+········End:     Computing witness polynomial ......................................3.294ms
+········Start:   Evaluating random polynomial
+········End:     Evaluating random polynomial ......................................605ns
+········Start:   Computing random witness polynomial
+········End:     Computing random witness polynomial ...............................7.251µs
+········Start:   Creating proof for unshifted polynomials
+··········Start:   Opening polynomial of degree 49151
+············Start:   Computing witness polynomials
+··············Start:   Evaluating polynomial
+··············End:     Evaluating polynomial .......................................4.337ms
+··············Start:   Computing witness polynomial
+··············End:     Computing witness polynomial ................................10.137ms
+··············Start:   Evaluating random polynomial
+··············End:     Evaluating random polynomial ................................698ns
+··············Start:   Computing random witness polynomial
+··············End:     Computing random witness polynomial .........................4.991µs
+············End:     Computing witness polynomials .................................14.534ms
+············Start:   Converting polynomial coeffs to bigints
+············End:     Converting polynomial coeffs to bigints .......................1.142ms
+············Start:   Computing commitment to witness polynomial
+············End:     Computing commitment to witness polynomial ....................1.887s
+············Start:   Evaluating random polynomial
+············End:     Evaluating random polynomial ..................................1.332µs
+············Start:   Converting polynomial coeffs to bigints
+············End:     Converting polynomial coeffs to bigints .......................1.360µs
+············Start:   Computing commitment to random witness polynomial
+············End:     Computing commitment to random witness polynomial .............2.143ms
+··········End:     Opening polynomial of degree 49151 ..............................1.905s
+········End:     Creating proof for unshifted polynomials ..........................1.905s
+········Start:   Creating proof for shifted polynomials
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................660.994µs
+··········Start:   Computing commitment to witness polynomial
+··········End:     Computing commitment to witness polynomial ......................504.321ms
+··········Start:   Evaluating random polynomial
+··········End:     Evaluating random polynomial ....................................721ns
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................300ns
+··········Start:   Computing commitment to random witness polynomial
+··········End:     Computing commitment to random witness polynomial ...............2.128ms
+········End:     Creating proof for shifted polynomials ............................507.212ms
+······End:     Creating proof ......................................................2.425s
+····End:     Opening 7 polynomials at query set of size 7 ..........................2.425s
+··End:     Generating local Proof shares ...........................................2.425s
+··Start:   Combining MPC proofs!
+··End:     Combining MPC proofs! ...................................................652.266µs
+··Start:   PC Proof creation time
+····Start:   Opening 13 polynomials at query set of size 13
+······Start:   Creating proof
+········Start:   Evaluating polynomial
+········End:     Evaluating polynomial .............................................1.758ms
+········Start:   Computing witness polynomial
+········End:     Computing witness polynomial ......................................3.451ms
+········Start:   Creating proof for unshifted polynomials
+··········Start:   Opening polynomial of degree 49151
+············Start:   Computing witness polynomials
+··············Start:   Evaluating polynomial
+··············End:     Evaluating polynomial .......................................5.158ms
+··············Start:   Computing witness polynomial
+··············End:     Computing witness polynomial ................................10.551ms
+············End:     Computing witness polynomials .................................15.740ms
+············Start:   Converting polynomial coeffs to bigints
+············End:     Converting polynomial coeffs to bigints .......................1.138ms
+············Start:   Computing commitment to witness polynomial
+············End:     Computing commitment to witness polynomial ....................1.356s
+··········End:     Opening polynomial of degree 49151 ..............................1.373s
+········End:     Creating proof for unshifted polynomials ..........................1.373s
+········Start:   Creating proof for shifted polynomials
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................391.38µs
+··········Start:   Computing commitment to witness polynomial
+··········End:     Computing commitment to witness polynomial ......................504.171ms
+··········Start:   Evaluating random polynomial
+··········End:     Evaluating random polynomial ....................................200ns
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................176ns
+··········Start:   Computing commitment to random witness polynomial
+··········End:     Computing commitment to random witness polynomial ...............1.532ms
+········End:     Creating proof for shifted polynomials ............................506.181ms
+······End:     Creating proof ......................................................1.893s
+······Start:   Creating proof
+········Start:   Evaluating polynomial
+········End:     Evaluating polynomial .............................................1.433ms
+········Start:   Computing witness polynomial
+········End:     Computing witness polynomial ......................................3.309ms
+········Start:   Creating proof for unshifted polynomials
+··········Start:   Opening polynomial of degree 16382
+············Start:   Computing witness polynomials
+··············Start:   Evaluating polynomial
+··············End:     Evaluating polynomial .......................................1.390ms
+··············Start:   Computing witness polynomial
+··············End:     Computing witness polynomial ................................3.270ms
+············End:     Computing witness polynomials .................................4.700ms
+············Start:   Converting polynomial coeffs to bigints
+············End:     Converting polynomial coeffs to bigints .......................380.14µs
+············Start:   Computing commitment to witness polynomial
+············End:     Computing commitment to witness polynomial ....................503.215ms
+··········End:     Opening polynomial of degree 16382 ..............................508.353ms
+········End:     Creating proof for unshifted polynomials ..........................508.367ms
+········Start:   Creating proof for shifted polynomials
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................385.395µs
+··········Start:   Computing commitment to witness polynomial
+··········End:     Computing commitment to witness polynomial ......................503.131ms
+··········Start:   Evaluating random polynomial
+··········End:     Evaluating random polynomial ....................................194ns
+··········Start:   Converting polynomial coeffs to bigints
+··········End:     Converting polynomial coeffs to bigints .........................203ns
+··········Start:   Computing commitment to random witness polynomial
+··········End:     Computing commitment to random witness polynomial ...............1.530ms
+········End:     Creating proof for shifted polynomials ............................505.131ms
+······End:     Creating proof ......................................................1.20s
+····End:     Opening 13 polynomials at query set of size 13 ........................2.913s
+··End:     PC Proof creation time ..................................................2.913s
+End:     Marlin::Prover ............................................................24.295s
+StartMsg: Statistics about proof
+  
+  Argument size in bytes: 1424
+  
+  Number of commitments without degree bounds: 8
+  Size (in bytes) of commitments without degree bounds: 384
+  Number of commitments with degree bounds: 3
+  Size (in bytes) of commitments with degree bounds: 288
+  
+  Number of evaluations: 20
+  Size (in bytes) of evaluations: 640
+  
+  Number of field elements in prover messages: 2
+  Size (in bytes) of prover message: 64
+  Number of Pederson Commitments: 1
+  Size (in bytes) of Pederson Commitments: 48
+
+EndMsg: Statistics about proof
+Called prover
+Start:   Auditer average time
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.817ms
+····End:     Randomly combining 11 commitments .....................................3.838ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.381ms
+····End:     Randomly combining 7 commitments ......................................2.397ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................797.31µs
+····End:     Randomly combining 2 commitments ......................................807.705µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.492ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................24.400µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.630ms
+······End:     Checking 3 evaluation proofs Result: true............................5.192ms
+····End:     Checking SinglePC::Proof ..............................................5.202ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................13.353µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................15.401µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................31.501µs
+····End:     AHP::Verifier::Decision ...............................................93.738µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................32.357µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.610ms
+Called auditor
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.759ms
+····End:     Randomly combining 11 commitments .....................................3.776ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.365ms
+····End:     Randomly combining 7 commitments ......................................2.379ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................799.775µs
+····End:     Randomly combining 2 commitments ......................................811.555µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.493ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................21.961µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.534ms
+······End:     Checking 3 evaluation proofs Result: true............................5.83ms
+····End:     Checking SinglePC::Proof ..............................................5.93ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................10.406µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................14.265µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................30.900µs
+····End:     AHP::Verifier::Decision ...............................................86.826µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................31.751µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.370ms
+Called auditor
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.762ms
+····End:     Randomly combining 11 commitments .....................................3.780ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.366ms
+····End:     Randomly combining 7 commitments ......................................2.380ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................800.369µs
+····End:     Randomly combining 2 commitments ......................................812.123µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.543ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................21.316µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.527ms
+······End:     Checking 3 evaluation proofs Result: true............................5.126ms
+····End:     Checking SinglePC::Proof ..............................................5.135ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................10.529µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................14.468µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................31.420µs
+····End:     AHP::Verifier::Decision ...............................................88.136µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................31.859µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.424ms
+Called auditor
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.759ms
+····End:     Randomly combining 11 commitments .....................................3.777ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.368ms
+····End:     Randomly combining 7 commitments ......................................2.383ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................796.955µs
+····End:     Randomly combining 2 commitments ......................................807.756µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.571ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................21.809µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.526ms
+······End:     Checking 3 evaluation proofs Result: true............................5.153ms
+····End:     Checking SinglePC::Proof ..............................................5.163ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................10.455µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................14.658µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................31.149µs
+····End:     AHP::Verifier::Decision ...............................................92.654µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................31.942µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.447ms
+Called auditor
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.757ms
+····End:     Randomly combining 11 commitments .....................................3.775ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.375ms
+····End:     Randomly combining 7 commitments ......................................2.390ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................797.516µs
+····End:     Randomly combining 2 commitments ......................................808.320µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.526ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................22.372µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.525ms
+······End:     Checking 3 evaluation proofs Result: true............................5.106ms
+····End:     Checking SinglePC::Proof ..............................................5.116ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................10.347µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................14.336µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................30.716µs
+····End:     AHP::Verifier::Decision ...............................................87.19µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................31.446µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.399ms
+Called auditor
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.758ms
+····End:     Randomly combining 11 commitments .....................................3.776ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.384ms
+····End:     Randomly combining 7 commitments ......................................2.401ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................796.519µs
+····End:     Randomly combining 2 commitments ......................................807.495µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.473ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................22.66µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.522ms
+······End:     Checking 3 evaluation proofs Result: true............................5.51ms
+····End:     Checking SinglePC::Proof ..............................................5.61ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................10.440µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................14.32µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................30.983µs
+····End:     AHP::Verifier::Decision ...............................................86.601µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................31.679µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.361ms
+Called auditor
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.759ms
+····End:     Randomly combining 11 commitments .....................................3.777ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.369ms
+····End:     Randomly combining 7 commitments ......................................2.384ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................796.825µs
+····End:     Randomly combining 2 commitments ......................................807.731µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.575ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................21.698µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.523ms
+······End:     Checking 3 evaluation proofs Result: true............................5.154ms
+····End:     Checking SinglePC::Proof ..............................................5.164ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................10.435µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................14.171µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................30.672µs
+····End:     AHP::Verifier::Decision ...............................................86.329µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................31.560µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.447ms
+Called auditor
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.757ms
+····End:     Randomly combining 11 commitments .....................................3.775ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.369ms
+····End:     Randomly combining 7 commitments ......................................2.384ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................796.575µs
+····End:     Randomly combining 2 commitments ......................................807.306µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.520ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................22.374µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.520ms
+······End:     Checking 3 evaluation proofs Result: true............................5.95ms
+····End:     Checking SinglePC::Proof ..............................................5.105ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................10.571µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................14.296µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................30.815µs
+····End:     AHP::Verifier::Decision ...............................................88.19µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................36.398µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.388ms
+Called auditor
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.753ms
+····End:     Randomly combining 11 commitments .....................................3.769ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.369ms
+····End:     Randomly combining 7 commitments ......................................2.384ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................797.750µs
+····End:     Randomly combining 2 commitments ......................................808.605µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.529ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................22.30µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.526ms
+······End:     Checking 3 evaluation proofs Result: true............................5.119ms
+····End:     Checking SinglePC::Proof ..............................................5.129ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................10.458µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................14.448µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................30.713µs
+····End:     AHP::Verifier::Decision ...............................................86.735µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................31.627µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.401ms
+Called auditor
+··Start:   Marlin::Verify
+····Start:   Randomly combining 11 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................3.766ms
+····End:     Randomly combining 11 commitments .....................................3.784ms
+····Start:   Randomly combining 7 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................2.365ms
+····End:     Randomly combining 7 commitments ......................................2.379ms
+····Start:   Randomly combining 2 commitments
+······Start:   Accumulating commitments and values
+······End:     Accumulating commitments and values .................................797.274µs
+····End:     Randomly combining 2 commitments ......................................807.977µs
+····Start:   Checking SinglePC::Proof
+······Start:   Checking 3 evaluation proofs
+········Start:   Combining commitments and proofs
+········End:     Combining commitments and proofs ..................................2.515ms
+········Start:   Converting results to affine for pairing
+········End:     Converting results to affine for pairing ..........................21.687µs
+········Start:   Performing product of pairings
+········End:     Performing product of pairings ....................................2.530ms
+······End:     Checking 3 evaluation proofs Result: true............................5.102ms
+····End:     Checking SinglePC::Proof ..............................................5.112ms
+····Start:   AHP::Verifier::Decision
+······Start:   Checking inner sumcheck
+······End:     Checking inner sumcheck .............................................10.506µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................14.479µs
+······Start:   Checking middle sumcheck
+······End:     Checking middle sumcheck ............................................31.126µs
+····End:     AHP::Verifier::Decision ...............................................87.389µs
+····Start:   Check the statement time
+····End:     Check the statement time ..............................................31.551µs
+··End:     Marlin::Verify  AHP decision: true and PC::Check: true and Stmt Commitment Check: true12.392ms
+Called auditor
+End:     Auditer average time ......................................................124.382ms
+test test::marlin::bench_random_circuits ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 4 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
